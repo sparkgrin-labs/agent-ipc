@@ -1,0 +1,34 @@
+{
+  "runtime": {
+    "engine": "Agent-IPC",
+    "version": "1.0.0",
+    "author": "Open Automation Collective / Sparkgrin@Labs",
+    "target_python": ">=3.10",
+    "dependencies": "standard_library_only"
+  },
+  "server": {
+    "host": "127.0.0.1",
+    "port": 9099,
+    "socket_path": null,
+    "max_connections": 128,
+    "keepalive_timeout_ms": 15000,
+    "nagle_algorithm": false
+  },
+  "buffer": {
+    "max_mem_queue": 10000,
+    "max_frame_bytes": 67108864,
+    "spool_db": "ipc_spool.db",
+    "wal_mode": true,
+    "sync_mode": "NORMAL"
+  },
+  "channels": {
+    "default": "events",
+    "allowed": [
+      "events",
+      "ticks",
+      "telemetry",
+      "orders",
+      "system"
+    ]
+  }
+}
